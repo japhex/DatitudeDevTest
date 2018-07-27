@@ -2,8 +2,6 @@
 
 Hey! This is the current developer test for Datitude. Please take as long as you need, and try to complete everything. If there is something you cannot complete or are unsure of, please provide feedback on this when you send the test back completed.
 
-/======================================================================/
-
 ### Architecture & Setup ###
 
 The test is a very small, very simple Node application. Firstly to get it to run you will need to install the dependencies. Please run the following in both the 'app' and 'front-end' folders:

@@ -3,14 +3,14 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const extractSass = new ExtractTextPlugin({
-    filename: "./../sql-app/public/css/main.css",
+    filename: "./../app/public/css/main.css",
     disable: process.env.NODE_ENV === "development"
 });
 
 module.exports = {
     entry: ['./src/js/app.js','./src/scss/main.scss'],
     output: {
-        filename: './../sql-app/public/js/build.min.js',
+        filename: './../app/public/js/build.min.js',
         sourceMapFilename: '[file].map'
     },
     devtool: 'source-map',
@@ -51,7 +51,7 @@ module.exports = {
             'global.jQuery': 'jquery'
         }),
 	    new CopyWebpackPlugin([
-		    { from: './src/images/**/*', to: './../sql-app/public/images'}
+		    { from: './src/images/**/*', to: './../app/public/images'}
 	    ]),
         extractSass
     ],
