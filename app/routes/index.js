@@ -3,7 +3,7 @@ const router = express.Router();
 const messaging = require('./../messaging/messaging');
 
 /**
- * @api {get} / Homepage
+ * @api {get} /
  * @apiName Home
  * @apiGroup Layout
  */
