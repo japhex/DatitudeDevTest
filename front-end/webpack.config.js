@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
 	entry: ['./src/js/app.js','./src/scss/main.scss'],
@@ -26,6 +27,9 @@ module.exports = {
 			'window.jQuery': 'jquery',
 			'global.jQuery': 'jquery'
 		}),
+		new CopyWebpackPlugin([
+			{ from: './src/images', to: './../sql-app/public/images'}
+		]),
 		new ExtractTextPlugin('./../sql-app/public/css/main.css', {
 			allChunks: true
 		})

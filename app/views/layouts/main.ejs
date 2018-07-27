@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title><%= title %></title>
+		<link rel="stylesheet" href="/css/main.css" />
+	</head>
+	<body>
+		<% include partials/header.ejs %>
+			<div>
+				<%- body %>
+			</div>
+		<% include partials/footer.ejs %>
+		<script src="/js/build.min.js"></script>
+	</body>
+</html>

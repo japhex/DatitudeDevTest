@@ -1,0 +1,12 @@
+<% layout('/layouts/main') -%>
+
+<div class="container error-body">
+    <h1><i class="material-icons">sentiment_dissatisfied</i> | <%= typeof error.code != 'undefined' ? error.code.replace(/_/g, ' '): '' %></h1>
+
+    <% if (error.status == '404') { %>
+        <p>You're looking for something that doesn't exist or that we've lost, if you think something should be here, please contact us.</p>
+    <% } else { %>
+        <p>Ouch...something's gone wrong, but rest assured we're on it.</p>
+		<pre><%= error.stack %></pre>
+    <% } %>
+</div>
