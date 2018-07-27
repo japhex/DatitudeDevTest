@@ -1,21 +1,9 @@
 node_modules/*
 node_modules/
 front-end/node_modules/*
-front-end/vendor
-front-end/public
-contributors.txt
-datitude-app/
-datitude-app-sql/
-app01.pem
-_BACKUP/
 */.DS_Store
-sql-app/uploads/*
-sql-app/node_modules/*
-**/*.icloud
 .DS_Store
 */node_modules
-logs/*.log
-.DS_Store
 .config
 .config/*
 .config/**/*
@@ -26,5 +14,3 @@ logs/*.log
 .idea
 .idea/workspace.xml
 .idea/**/*
-sql-app/public
-datitude-app.latest.tar.gz
