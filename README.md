@@ -10,21 +10,18 @@ The test is a very small, very simple Node application. Firstly to get it to run
 
 ```
 npm install
-
 ```
 
 Great! You will need to run the node application and also the frontend. Next in the 'front-end' directory, simply run the following to have a live watching/compiling webpack server:
 
 ```
 webpack
-
 ```
 
 And secondly, inside the 'app' folder, run the following to start the application on port 3000:
 
 ```
 npm start
-
 ```
 
 Now if you navigate to 'localhost:3000' you should see the app!
