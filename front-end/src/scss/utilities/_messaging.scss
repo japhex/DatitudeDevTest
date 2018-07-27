@@ -1,0 +1,181 @@
+.message-container {
+    position: relative;
+}
+
+.error-text, .success-text, .request-errors, .notification {
+    position: fixed;
+    top:10px;
+    width:350px;
+    background:$brandLightGreen;
+    box-shadow: 0px 6px 5px -1px rgba(0,0,0,0.75);
+    z-index:3;
+    padding:30px 20px 30px 0;
+    color:#fff;
+    border-radius: 10px;
+    font-size: 0.8rem;
+
+    i {
+        @include centerElement(false,true);
+        color:#fff;
+        position: absolute;
+        left: 5px;
+        font-size: 3rem;
+    }
+
+    p {
+        margin-bottom:0;
+        padding-left:70px;
+    }
+
+    h3 {
+        padding-left:70px;
+    }
+
+    [data-js-close] {
+        color:#fff;
+    }
+}
+
+.home {
+    .request-errors {
+        top:0;
+    }
+}
+
+.error-text, .request-errors {
+    background:$error;
+}
+
+.request-errors, .success-text {
+    width: 100%;
+    right: 0;
+    border-radius: 0;
+    top: 0;
+
+    @media (min-width: $desktopBreakpoint) {
+        right: 10px;
+        border-radius: 10px;
+        top:10px;
+        width:350px;
+    }
+
+    h2 {
+        float:left;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        margin:0 10px 0 0;
+    }
+
+    p {
+        text-transform: uppercase;
+        line-height: 1.7;
+
+        a {
+            color:#fff;
+            text-decoration: underline;
+        }
+    }
+}
+
+.success-text {
+    i {
+        left:15px;
+    }
+}
+
+.notifications-container {
+    position: fixed;
+    top:0;
+    left:0;
+    z-index: 2;
+}
+
+.notification {
+    padding:20px;
+    background:$brandDarkYellow;
+    position: relative;
+    top:0;
+    margin-top:10px;
+    margin-left:10px;
+
+	@media (max-width: $mobileBreakpoint) {
+		width: 100%;
+		margin:0;
+		border-radius: 0;
+
+		.container {
+			padding:0;
+		}
+	}
+
+	.title-bar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 15px 5px 17px 5px;
+		width: 100%;
+		background: $brandLightYellow;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+
+		&.notification--success {
+			background:$brandLightGreen;
+		}
+
+		i {
+			font-size: 4rem;
+			top: 18px;
+		}
+
+		span:not([data-js-close]) {
+			padding-left: 70px;
+			font-size: 0.7rem;
+			text-transform: uppercase;
+		}
+
+		span[data-js-close] {
+			top:17px;
+		}
+	}
+
+    &--success {
+        background:$brandDarkGreen;
+    }
+
+    p {
+        padding:0;
+        text-transform: none;
+
+        &.title {
+            @include clearfix();
+
+            i {
+                float:left;
+                transform:none;
+            }
+
+            span {
+                float: left;
+                padding: 2px 0 0 6px;
+                font-size: 15px;
+            }
+        }
+
+        &.content {
+            padding-top: 35px;
+            margin-top: 12px;
+            clear: both;
+
+            strong {
+                word-break: break-all;
+            }
+
+            a {
+                text-transform: uppercase;
+                color: #fff;
+                font-weight: bold;
+                text-decoration: underline;
+            }
+        }
+    }
+}

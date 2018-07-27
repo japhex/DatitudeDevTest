@@ -1,0 +1,26 @@
+{
+  "name": "domurl",
+  "version": "2.1.0",
+  "main": "url.min.js",
+  "ignore": [
+    ".project",
+    "test",
+    "bower.json",
+    "package.json",
+    "README.md",
+    ".idea",
+    ".gitignore",
+    ".npmignore"
+  ],
+  "homepage": "https://github.com/Mikhus/domurl",
+  "_release": "2.1.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v2.1.0",
+    "commit": "deca096020e76ab33a39536ce51ea53556def7d5"
+  },
+  "_source": "https://github.com/Mikhus/domurl.git",
+  "_target": "^2.1.0",
+  "_originalSource": "domurl",
+  "_direct": true
+}

@@ -1,0 +1,303 @@
+.navbar {
+    width:100%;
+    padding-bottom:0;
+
+    @media (min-width: $desktopBreakpoint) {
+        top:0;
+        position: fixed;
+    }
+
+    &-nav {
+        @include clearfix();
+
+        .user-nav {
+            padding-bottom:20px;
+
+            @media (min-width: $desktopBreakpoint) {
+                float:right;
+                padding-bottom:0;
+            }
+
+            a.nav-item {
+                position: relative;
+                margin-right:7px;
+                font-size: 0.8rem;
+                margin-left: 0;
+                min-height:25px;
+	            color:rgba(255, 255, 255, 0.75);
+
+                @media (min-width: $desktopBreakpoint) {
+                    float:left;
+                    padding:7px 0 0 10px;
+                }
+
+                &:after {
+                    position: absolute;
+                    top: 3px;
+                    right: -11px;
+                    font-size: 1rem;
+                }
+
+                &:last-child {
+                    margin-right:0;
+                    margin-left:0;
+                }
+
+                i {
+                    float: left;
+                    font-size: 1.4rem;
+                    top:-2px;
+
+                    &.pending-notifications {
+                        color:$brandDarkGreen;
+                    }
+                }
+
+                @media (min-width: $desktopBreakpoint) {
+                    i {
+                        display:block;
+                    }
+                }
+
+                &:hover {
+                    .tooltip {
+                        @media (min-width: $desktopBreakpoint) {
+                            display:block;
+                        }
+                    }
+                }
+            }
+
+            .notifications-nav {
+                margin-right:5px;
+
+                @media (max-width: $mobileBreakpoint) {
+                    display:none;
+                }
+            }
+        }
+
+        .with-icon {
+            span {
+                position: relative;
+                top:-6px;
+            }
+        }
+
+        &__main-navigation.navbar-nav-responsive {
+            @include clearfix();
+            clear:both;
+            text-align: center;
+            background:#282828;
+            padding-bottom:10px;
+
+            @media (max-width: $mobileBreakpoint) {
+                padding-bottom:25px;
+            }
+        }
+
+        &-responsive {
+            display: none;
+            padding-bottom:30px;
+
+            @media (min-width: $desktopBreakpoint) {
+                display: block;
+                padding-bottom:0;
+            }
+
+            &-trigger {
+                position: absolute;
+                right: 15px;
+                top: 15px;
+
+                @media (max-width: $mobileBreakpoint) {
+                    float:right;
+                }
+
+                i {
+                    font-size: 2rem;
+                }
+
+                @media (min-width: $desktopBreakpoint) {
+                    display:none;
+                }
+            }
+        }
+    }
+    &-brand {
+        @include clearfix();
+	    padding-bottom:0;
+
+        @media (min-width: $largeDesktopBreakpoint) {
+            min-width:284px;
+            height:auto;
+        }
+
+        img {
+            -webkit-transition: width 0.2s ease-in-out;
+            -moz-transition: width 0.2s ease-in-out;
+            -o-transition: width 0.2s ease-in-out;
+            transition: width 0.2s ease-in-out;
+            width:36px;
+            float:left;
+            position: relative;
+            top: -3px;
+        }
+
+        .brand-name {
+            position: relative;
+            top: 2px;
+            padding: 0 20px 0 20px;
+            font-weight: 100;
+            display: inline-block;
+            float:left;
+
+            @media (max-width: $mobileBreakpoint) {
+                position: static;
+            }
+
+            @media (min-width: $desktopBreakpoint) {
+	            top: 3px;
+	            font-size: 0.9rem;
+            }
+        }
+
+        .divider {
+            display:none;
+
+            @media (min-width: $desktopBreakpoint) {
+                display:none;
+            }
+
+            @media (min-width: $largeDesktopBreakpoint) {
+                display:inline-block;
+            }
+        }
+
+	    .badge {
+		    position: relative;
+		    top:-2px;
+	    }
+    }
+
+    &-full {
+        z-index:3;
+        background: #222;
+        box-shadow: 0px -3px 16px 0px #000;
+    }
+
+    &.scrolled {
+        padding-top:0;
+        padding-bottom:6px;
+        height:42px;
+
+        .navbar-brand {
+            @media (min-width: $desktopBreakpoint) {
+                height:auto;
+            }
+
+            img {
+                width:24px;
+                padding-top:8px;
+            }
+
+            .brand-name {
+                top:3px;
+                padding:3px 20px 0 12px;
+            }
+        }
+
+        .navbar-nav {
+            .nav-item {
+                text-transform: uppercase;
+                font-size:0.8rem;
+
+                @media (min-width: $desktopBreakpoint) {
+                    padding-top:0.725rem;
+                }
+
+                i {
+                    font-size:1.5rem;
+                }
+            }
+
+            .user-nav {
+                .nav-item {
+                    padding-top:0.725rem;
+
+	                &:after {
+		                top:8px;
+	                }
+                }
+            }
+
+            &-responsive-trigger {
+                top:6px;
+            }
+        }
+    }
+}
+
+.nav-link {
+    padding-top:0.725rem;
+    width:100%;
+
+    @media (min-width: $desktopBreakpoint) {
+        width:auto;
+    }
+
+    &.nav-item {
+        margin-left:0;
+        padding:1.725rem 0 0 10px;
+        font-weight: 200;
+        font-size: 0.9rem;
+        float:none;
+        display:inline-block;
+        color: rgba(255, 255, 255, 0.5);
+
+        @media (min-width: $desktopBreakpoint) {
+            padding-top:0.725rem;
+        }
+
+        &:hover {
+            color:rgba(255, 255, 255, 0.75);
+        }
+
+        &:after {
+            content:'';
+            margin-left:10px;
+            color:$veryVeryDarkGrey;
+
+            @media (min-width: $desktopBreakpoint) {
+                content:'|'
+            }
+        }
+
+        &:last-child {
+            &:after {
+                content:'';
+            }
+        }
+
+        &.active {
+            color:rgba(255, 255, 255, 0.75);
+        }
+
+        i {
+            font-size: 1rem;
+            position: relative;
+            top: 3px;
+        }
+    }
+
+    &.datitude-admin {
+        color:$error;
+        padding-left:0;
+        margin-left:10px;
+        width:auto;
+
+        &:after {
+            margin-left:0;
+        }
+    }
+}

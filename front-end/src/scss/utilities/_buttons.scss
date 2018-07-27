@@ -1,0 +1,120 @@
+.btn {
+    transition: box-shadow 200ms ease-out;
+
+    &:hover, &:active, &:focus {
+        box-shadow:0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    &-primary {
+        background:$brandDarkGreen;
+        border-color:$brandDarkGreen;
+
+        &:hover, &:active, &:focus {
+            background:$brandDarkGreen;
+            border-color:$brandDarkGreen;
+        }
+    }
+
+    &-danger {
+        background:$buttonRed;
+        border-color:$buttonRed;
+
+        &:hover, &:active, &:focus {
+            background: $buttonRed;
+        }
+    }
+
+    &-download {
+        background:$brandDarkBlue;
+        border-color:$brandDarkBlue;
+        color:#fff;
+
+        &:hover, &:active, &:focus {
+            background: $brandDarkBlue;
+        }
+
+        i {
+            position: absolute;
+        }
+    }
+
+    &-action {
+        background:$brandDarkYellow;
+        border-color:$brandDarkYellow;
+        color:#fff;
+
+        &:hover, &:active, &:focus {
+            background: $brandDarkYellow;
+        }
+    }
+
+    &-third {
+        background:none;
+        border-color:#cecece;
+        color:#cecece;
+
+        &:hover, &:active, &:focus {
+            background: none;
+        }
+    }
+
+    &-underline {
+        background: 0;
+        border: 0;
+        border-bottom: 1px solid;
+        border-radius: 0;
+        margin-right: 10px;
+        margin-bottom:10px;
+
+        @media (min-width: $tabletBreakpoint) {
+            margin-bottom:0;
+        }
+    }
+
+    &-text {
+        color:#fff;
+        border-bottom:1px solid;
+        padding: 0;
+        border-radius: 0;
+    }
+
+	&-primary-action {
+		color:#fff;
+		background:#ff5252;
+		border-color:#e04545;
+
+		&:hover, &:active, &:focus {
+			background:#e04545;
+		}
+
+		&-underline {
+			color:#ff5252;
+			background:none;
+			border:none;
+			border-bottom:1px solid #ff5252;
+			border-radius: 0;
+			padding: 0;
+		}
+	}
+
+	&-secondary-action {
+		color:#fff;
+		background:#ba4446;
+		border-color:#a83d3f;
+
+		&:hover, &:active, &:focus {
+			background:#a83d3f;
+		}
+	}
+}
+
+
+.form-element .btn.sub-button {
+    padding: 0.1rem 0.3rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+
+    &:hover {
+        color:#fff;
+    }
+}

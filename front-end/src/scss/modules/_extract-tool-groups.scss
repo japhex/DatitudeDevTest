@@ -1,0 +1,143 @@
+.extract-tool-groups {
+    &.container {
+        padding-top:10px;
+    }
+
+    .datalist-viewport.datalist--half-width {
+        float:left;
+        width:30%;
+
+        &:last-child {
+            float:right;
+            width:65%;
+        }
+    }
+}
+
+.extract-tool-group, .extract-tool-group-lists li {
+    break-inside: avoid;
+    margin-bottom:2%;
+    list-style-type:none;
+    background: #444;
+    border: 1px solid #333;
+    cursor: pointer;
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    color:#999;
+    border-radius: 5px;
+    margin-right: 2%;
+
+	span {
+		font-family: 'Lato', sans-serif;
+		font-size: 1rem;
+
+		strong {
+			font-weight: normal;
+			text-transform: uppercase;
+			font-size: 0.7rem;
+		}
+	}
+
+    &:hover {
+        .template-actions {
+            display: block;
+        }
+    }
+
+    &--unassigned {
+        background:#666;
+        color:#222;
+
+        > span {
+            text-transform: uppercase;
+        }
+
+        .extract-tool-group-lists {
+            background:#666;
+
+            li {
+                background:#555;
+            }
+        }
+    }
+}
+
+.extract-tool-group-lists li {
+    position: relative;
+    margin-right: 0;
+}
+
+[data-extract-tool-groups] {
+	@media (min-width: $tabletBreakpoint) {
+		column-count: 3;
+		column-gap: 0;
+	}
+}
+
+.extract-tool-group-lists li {
+    position: relative;
+
+    &:hover {
+        .template-actions {
+            display: block;
+        }
+    }
+}
+
+[data-extract-tool-templates] li {
+    z-index:1;
+    width:auto;
+    margin-bottom:5px;
+    position: relative;
+
+    &:hover {
+        .template-actions {
+            display: block;
+        }
+    }
+}
+
+.template-actions {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    float:none;
+    width:auto;
+
+    i {
+        color:#999;
+        font-size:19px;
+
+        &:hover {
+            color:#fff;
+        }
+    }
+}
+
+.extract-tool-group {
+    > .template-actions {
+        position: relative;
+
+        [data-edit-extract-group] {
+            position: absolute;
+            right: -10px;
+            top: -29px;
+        }
+    }
+}
+
+[data-extract-tool-groups], [data-extract-tool-templates] {
+    @include clearfix();
+    padding-left:0;
+}
+
+.extract-tool-group-lists {
+    @include clearfix();
+    padding:10px 10px 5px 10px;
+    margin-top:10px;
+    border: 1px solid #333;
+    box-shadow: #333 0px 0px 7px inset;
+    background: #414141;
+	height:150px;
+	overflow: scroll;
+}

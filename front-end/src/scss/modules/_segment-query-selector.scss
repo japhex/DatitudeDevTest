@@ -1,0 +1,56 @@
+.segment-query-selector {
+	[data-save-query] {
+		margin-top: 26px;
+		padding: 20px 40px;
+		margin-left: 40px;
+	}
+}
+
+.segment-options[data-js="datalistedit"] {
+	width:40%;
+
+	form {
+		margin: 0;
+		width: 100%;
+
+		.btn-primary {
+			padding: 20px 40px;
+		}
+	}
+}
+
+.segment-details {
+	color:#ccc;
+	text-align:center;
+
+	strong {
+		color:#fff;
+	}
+
+	.selection-notes {
+		border-top: 1px solid #444;
+		padding-top:15px;
+	}
+}
+
+.campaign-management {
+    .tab-content {
+        [data-add-segment="true"] {
+            color:$brandDarkGreen;
+            cursor:pointer;
+
+            i {
+                position: relative;
+                top:5px;
+            }
+        }
+
+        [data-campaign-segment="true"] {
+            border-bottom:1px solid #555;
+
+            &:last-child {
+                border-bottom:0;
+            }
+        }
+    }
+}

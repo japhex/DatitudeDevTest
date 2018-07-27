@@ -1,0 +1,480 @@
+.scrolltable {
+    overflow-x: scroll;
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+.scrolltable > .body {
+    width: -webkit-fit-content;
+    overflow-y: scroll;
+    flex: 1;
+    -webkit-flex: 1;
+
+    .ref_lookup_title_gender &, .ref_iso_country &, .ref_segment_frequency &, .ref_segment_monetary &, .query-selector-forms & {
+        width:100%;
+    }
+
+	&.body-fullwidth {
+		width:100%;
+	}
+}
+
+#constrainer {
+    width: 100%;
+    height: 550px;
+
+	.datalist-edit & {
+		height:350px;
+	}
+}
+
+.datalist {
+    &-data {
+        @include clearfix();
+        position: relative;
+        margin:1rem 0;
+    }
+
+    &-view {
+        width:100%;
+        padding:0;
+        list-style:none;
+        font-size:0.7rem;
+
+        @media (min-width: $desktopBreakpoint) {
+            font-size:0.9rem;
+        }
+
+        tr {
+            background:$darkGrey;
+            border-bottom:1px solid $veryDarkGrey;
+            cursor: pointer;
+
+            &:last-child {
+                border-bottom:0;
+            }
+
+            td, th {
+                color:$lightMediumGrey;
+                min-width: 250px;
+
+                .ref_store_locations_for_ecom_sales_attribution & {
+                    width:285px;
+                }
+
+                .ref_segment_frequency & {
+                    width:25%;
+                }
+
+                .ref_talend_context_key_value &, .ref_iso_country & {
+                    width:33%;
+                }
+
+                .ref_lookup_title_gender & {
+                    width:50%;
+                }
+            }
+
+            th {
+                span:first-child {
+                    padding:0.5rem;
+                    display: block;
+                }
+
+                span {
+                    i {
+                        position: relative;
+                        top:9px;
+                    }
+                }
+            }
+
+            td {
+                padding:0.5rem;
+                word-break: break-all;
+
+                a {
+                    color:$veryDarkGrey;
+                }
+            }
+        }
+
+        thead {
+            tr {
+                background: none;
+                th {
+                    color:$lightMediumGrey;
+                    font-weight:bold;
+                    text-transform: uppercase;
+                    font-size: 0.6rem;
+                    height:50px;
+                    position: relative;
+
+                    &:after {
+                        // content:'';
+                        // position: absolute;
+                        // top:0;
+                        // right:0;
+                        // border-right:1px solid;
+                        // height:100%;
+                        // color:#555;
+                    }
+                }
+            }
+        }
+
+        thead:not(.no-tooltips) {
+            tr {
+                th {
+                    &:hover {
+                        .tooltip {
+                            display: block;
+                        }
+                    }
+
+                    span:first-child {
+                        display: block;
+
+                        i {
+                            @include centerElement(true,false);
+                            position: absolute;
+                            bottom:-1px;
+                        }
+                    }
+
+                    .tooltip {
+                        overflow:visible;
+                        width: auto;
+                        top:40px;
+                    }
+
+                    .oi-elevator {
+                        display: none;
+                    }
+                }
+                // Custom styling per header...
+                [data-js-datalist="day_name"] {
+                    span:first-child {
+                        width:52px;
+                    }
+                }
+                [data-js-datalist="day_number_in_week"], [data-js-datalist="day_number_in_month"], [data-js-datalist="day_number_in_year"], [data-js-datalist="month_numer_in_year"] {
+                    span:first-child {
+                        width:34px;
+                    }
+                }
+                [data-js-datalist="month_name"] {
+                    span:first-child {
+                        width:48px;
+                    }
+                }
+                [data-js-datalist="trading_year_name"] {
+                    span:first-child {
+                        width:62px;
+                    }
+                }
+                [data-js-datalist="audit_context"] {
+                    span:first-child {
+                        width:60px;
+                    }
+                }
+                [data-js-datalist="alert_main_group"], [data-js-datalist="alert_group"], [data-js-datalist="alert_title"] {
+                    span:first-child {
+                        width:73px;
+                    }
+                }
+                [data-js-datalist="alert_description"], [data-js-datalist="alert_query"] {
+                    span:first-child {
+                        width:100px;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                font-size:0.8rem;
+
+                &:hover {
+                    background:$veryVeryDarkGrey;
+                }
+
+                [data-js-datalist="cost"] {
+                    text-align: right;
+                    padding-right: 30px;
+                }
+
+                .hide-cell {
+                    display: none;
+                }
+            }
+        }
+
+        .analysis.datalist-view-runanalysis-yes, .status.status-success {
+            color:$brandDarkGreen;
+        }
+
+        .analysis.datalist-view-runanalysis-pending, .status.status-requested {
+            color:$brandDarkYellow;
+        }
+
+        .analysis.datalist-view-runanalysis-no, .status.status-failed {
+            color:$buttonRed;
+        }
+
+        &-lastupdated {
+            float:right;
+        }
+    }
+
+    &-edit {
+        @include popup(true, false);
+        overflow-x: hidden;
+
+        @media (min-width: $tabletBreakpoint) {
+            width:70%;
+        }
+
+        legend {
+            color: #cecece;
+            border-bottom: 1px solid #555;
+            padding-bottom: 10px;
+            font-weight: 100;
+            font-size: 1.3rem;
+            margin-bottom:20px;
+        }
+
+        form {
+            margin: 30px auto;
+
+            @media (min-width: $desktopBreakpoint) {
+                width: 70%;
+
+                &.wide-form {
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    &-generic {
+        .form-element {
+            float:left;
+            width:45%;
+
+            &:nth-child(odd) {
+                clear:both;
+            }
+
+            &:nth-child(even) {
+                float:right;
+            }
+        }
+    }
+
+    &-viewport {
+        width:100%;
+        background: $veryDarkGrey;
+
+        &.with-search {
+            position: relative;
+
+            @media (min-width: $desktopBreakpoint) {
+                padding-top:0;
+            }
+        }
+
+        > .container {
+            overflow: scroll;
+        }
+    }
+
+    &--half-width {
+        @include clearfix();
+        width:45%;
+        vertical-align: top;
+        float:left;
+
+        &:last-child {
+            float:right;
+        }
+
+        h2 {
+            @include clearfix();
+            margin-top:20px;
+            color:$normalGrey;
+        }
+
+        .inline-add-entry {
+            color:$brandDarkGreen;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            float:right;
+
+            i {
+                position: relative;
+                top: 5px;
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    > .form-element {
+        @include clearfix();
+        padding: 10px 0;
+        border-radius: 3px;
+        margin:0;
+
+        label, input {
+            float:left;
+            width:auto;
+        }
+
+        label {
+            margin-right:20px;
+            position: relative;
+            top: 9px;
+            left: 10px;
+        }
+
+        input {
+            border-radius: 20px;
+            border: 1px solid $normalGrey;
+            width:100%;
+            line-height: 1.5rem;
+        }
+    }
+
+    &-description {
+        color:#fff;
+
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 100;
+        }
+
+        p {
+            margin-bottom:0;
+            font-family: arial;
+            text-transform: uppercase;
+            font-size: 0.7rem;
+        }
+    }
+
+	.hidden-field {
+		display: none;
+	}
+}
+
+.datalist-edit[data-js-clientfeatures="true"] form {
+	width:88%;
+
+	.form-element {
+		margin-bottom:10px;
+	}
+}
+
+[data-js-datalist="format"] {
+    display:none;
+
+    @media (min-width: $desktopBreakpoint) {
+        display:table-cell;
+    }
+}
+
+.create-mode {
+    .btn-danger {
+        display: none;
+    }
+}
+
+.confirmation-popup {
+    @include popup();
+    text-align: center;
+
+    p {
+        padding-bottom: 45px;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+        color:#fff;
+    }
+
+    &-buttons {
+        a {
+            padding:10px 40px;
+
+            &:first-child {
+                margin-right:20px;
+            }
+        }
+    }
+
+    .form-element:not(.half-width) {
+        clear:both;
+    }
+}
+
+.segment-query-selector {
+    .confirmation-popup {
+        p {
+            padding-bottom:0;
+
+            strong {
+                display:block;
+                font-size:2rem;
+            }
+        }
+    }
+}
+
+.site-container {
+    .data-type, .upload-confirmation {
+        label, input {
+            display: inline-block;
+            width:auto;
+        }
+
+        label {
+            margin-right:10px;
+        }
+
+        p {
+            padding-bottom:30px;
+        }
+    }
+}
+
+.campaign-management {
+    .datalist-edit {
+        .tabs {
+            .tab-trigger {
+                padding:0;
+                height:auto;
+                width:auto;
+
+                a {
+                    padding-left:10px;
+
+                    span {
+                        text-transform: uppercase;
+                        font-weight: 300;
+                        font-size: 0.8rem;
+                    }
+                }
+            }
+        }
+
+        .datalist-viewport {
+            background:none;
+        }
+
+        [data-content="record-selections"], [data-content="promotion"], [data-content="drop"], [data-content="books"] {
+            form .segment-form {
+                display: none;
+            }
+        }
+    }
+}

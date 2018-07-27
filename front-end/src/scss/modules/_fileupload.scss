@@ -1,0 +1,187 @@
+.datalist-upload, .datalist-upload-full {
+    display: none;
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:none;
+    padding:1rem;
+    z-index: 4;
+
+    @media (min-width: $desktopBreakpoint) {
+        @include centerElement();
+        width:70%;
+        height:auto;
+    }
+
+    form {
+        margin: 30px auto;
+        text-align: center;
+        padding:150px 0;
+        outline: 2px dashed $midMediumGrey;
+        outline-offset: -20px;
+        background: $veryDarkGrey;
+
+        @media (min-width: $desktopBreakpoint) {
+            width: 93%;
+        }
+
+        i {
+            font-size: 8rem;
+            color: $darkGreyBlue;
+        }
+
+        label {
+            display: block;
+            font-size: 1.2rem;
+            color:$normalGrey;
+            font-weight: 200;
+
+            strong {
+                text-decoration: underline;
+                cursor: pointer;
+                font-weight: 200;
+            }
+        }
+
+        input {
+            display: none;
+        }
+
+        .btn {
+            display: none;
+            margin:0 auto;
+        }
+    }
+
+    .uploading, .success, .error {
+        display: none;
+    }
+
+    &.is-dragover {
+        form {
+            background: $veryVeryLightGrey;
+        }
+    }
+
+    &.is-uploading {
+        input {
+            visibility: none;
+        }
+
+        .uploading {
+            display: block;
+        }
+    }
+
+    &.dropped {
+
+    }
+}
+
+.ftp-tool {
+    .form-centered-control {
+        width:100%;
+        @media (min-width: $tabletBreakpoint) {
+            width:70%;
+        }
+    }
+}
+
+.ftp-upload, .data-type, .upload-confirmation {
+    @extend .datalist-upload;
+    width:100%;
+    transform:none;
+    text-align: center;
+
+    .extract-tool & {
+        transform: translate(-50%, -50%);
+    }
+
+    form {
+        outline:0;
+        margin:0 auto;
+        padding:0;
+        background:none;
+
+        select {
+            display:none;
+        }
+
+        label {
+            cursor:pointer;
+
+            small {
+                text-decoration: underline;
+            }
+        }
+
+        .dragndrop {
+            margin-bottom: 50px;
+        }
+
+        .btn {
+            margin-top:30px;
+        }
+    }
+
+    p {
+        color:#cecece;
+        padding-top: 20px;
+        margin-bottom: 0;
+
+        &:last-child {
+            border-top: 1px solid;
+	        padding-bottom:20px;
+        }
+
+        &.error-message {
+            color:$buttonRed;
+            margin-bottom:0;
+        }
+    }
+
+    &.is-dragover {
+        .form-centered-control {
+            outline: 2px $gray-light dashed;
+        }
+
+        form {
+            background: rgba(0, 0, 0, 0.8);
+        }
+    }
+
+    .validation-error {
+        color:$buttonRed;
+    }
+}
+
+.ftp-upload {
+    .form-element {
+        width: 60%;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+	.uploaded {
+		background: #f5b622;
+		color: #000;
+		padding: 20px;
+
+		a {
+			color:#000;
+			font-weight: bold;
+		}
+	}
+}
+
+.data-type.form-centered-control {
+    select {
+        width:60%;
+    }
+
+    .choose-resultset {
+        clear:both;
+    }
+}

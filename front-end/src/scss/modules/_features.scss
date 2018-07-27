@@ -1,0 +1,17 @@
+[data-js-base="filters"] {
+	@include clearfix();
+	margin:40px 0;
+
+	.filter-toggle {
+		float:left;
+		margin-right: 25px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	.button-element {
+		clear:both;
+	}
+}

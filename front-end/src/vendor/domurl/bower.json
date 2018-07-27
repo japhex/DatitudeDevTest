@@ -1,0 +1,15 @@
+{
+    "name": "domurl",
+    "version": "2.1.0",
+    "main": "url.min.js",
+    "ignore": [
+        ".project",
+        "test",
+        "bower.json",
+        "package.json",
+        "README.md",
+        ".idea",
+        ".gitignore",
+        ".npmignore"
+    ]
+}

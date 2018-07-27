@@ -1,0 +1,126 @@
+.settings-section {
+    @extend .filter-selections;
+    display: block;
+    margin-top:50px;
+    padding:10px;
+
+    &:last-child {
+        display: none;
+    }
+
+    @media (min-width: $tabletBreakpoint) {
+        padding:20px;
+        float:left;
+        width:50%;
+
+        &:last-child {
+            display: block;
+        }
+    }
+
+    .form-element {
+        width:100%;
+        float:none;
+        margin-bottom:1rem;
+        min-height: auto;
+
+        input {
+            position: relative;
+            padding-left:1rem;
+        }
+    }
+
+    &-title {
+        @extend .header-title;
+    }
+
+    p, li {
+        color:$lightGreyBlue;
+        font-weight: 200;
+    }
+
+    p {
+        margin-top:15px;
+        color:#fff;
+    }
+
+    ul {
+        li.settings-section-list-item {
+            width:100%;
+            text-align: left;
+            padding-top:5px;
+            list-style-type: disc;
+        }
+    }
+
+    .parsley-errors-list {
+        li {
+            width:100%;
+            padding-top:5px;
+            color:$buttonRed;
+            text-align: left;
+            font-size: 0.9rem;
+        }
+    }
+
+    form:first-child {
+        border-bottom: 1px solid #555;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+
+    &:last-child {
+        padding-left:20px;
+
+        @media (min-width: $tabletBreakpoint) {
+            padding-left:10px;
+        }
+
+        h1 {
+            font-size:2rem;
+
+            @media (min-width: $tabletBreakpoint) {
+                font-size:2.5rem;
+            }
+        }
+    }
+}
+
+.settings-section-description {
+    font-weight: 200;
+    margin-top:15px;
+    color:#fff;
+}
+
+.tab-content {
+    .settings-section {
+        margin-top: 0;
+        background:none;
+    }
+}
+
+.app-settings-settings {
+    .settings-list {
+        padding:0;
+        margin:0;
+
+        li {
+            display: block;
+            float:none;
+            width:100%;
+            color:$lightGreyBlue;
+            text-align:left;
+
+            .template-name {
+                display:inline-block;
+                min-width:200px;
+            }
+
+            .btn {
+                padding:0.1rem 0.4rem;
+                text-transform: uppercase;
+                font-size: 0.9rem;
+            }
+        }
+    }
+}

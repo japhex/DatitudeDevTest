@@ -1,0 +1,64 @@
+.advance-search-filter {
+    width:850px;
+    height: 600px;
+    overflow-y: scroll;
+
+    form {
+        width:100%;
+    }
+
+    input, select {
+        font-size: 1.2rem;
+        float:left;
+        position: relative;
+        padding: 17px;
+    }
+
+    select {
+        padding:0;
+    }
+
+    .oi {
+        top:15px;
+    }
+
+    .button-element {
+        float: right;
+        position: absolute;
+        bottom: -120px;
+        right: 50px;
+        margin-bottom: 10px;
+    }
+}
+
+/* customers-and-prospects advsearch */
+.advance-search-filter ul {
+    list-style: none;
+}
+
+.advance-search-filter ul li h2 span {
+    vertical-align: middle;
+}
+
+.advance-search-filter ul li h2 {
+    position: relative;
+    color: #999;
+    padding: 20px 0;
+    border-top: 1px solid #444;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+
+.advance-search-filter ul li h2 .material-icons {
+    top: 20px;
+    right: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.advance-search-filter form-element:nth-child(odd) {
+    color: #777;
+}
+.advance-search-filter form-element:nth-child(even) {
+    color: blue;
+}
