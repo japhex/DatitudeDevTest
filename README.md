@@ -32,6 +32,7 @@ This is the basis of a new site for a small business, and as such there are a fe
 
 - There is a rogue character appearing on the page before the title, please find and remove this.
 - The navigation is being loaded from the API, but its not being rendered to the page, please format this into a proper navigation menu using the data supplied.
+- The homepage is currently showing the title(s) for the About Us page, please fix this.
 - There is currently a route for the homepage and for the navigation, however there is no route to load the homepage content, please create this and make sure it responds with the content as a JSON object.
 - There is no route for the About Us page, please create this and use the same data flow as for the homepage.
 - There is no design for this site or its pages, this is up to you. Do not feel pressured to deliver an eye wateringly stunning design, that is not the point. The point is adding some meaningful markup and CSS and remembering that there are elements that may be repeated. We want to see that you can interperet requirements in a clean, DRY (Don't repeat yourself) fashion.
